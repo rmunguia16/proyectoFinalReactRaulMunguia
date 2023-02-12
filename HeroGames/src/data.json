@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "nombre": "Nintendo Switch OLED",
+    "precio": 9999.00,
+    "categoria": "videojuegos",
+    "tipo": "Consola",
+    "marca": "Nintendo",
+    "url": "./assets/img/videojuegos/consolas/NSO.jpg",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "nombre": "Xbox Series X",
+    "precio": 14999.00,
+    "categoria": "videojuegos",
+    "tipo": "videojuegos",
+    "marca": "Microsoft",
+    "url": "./assets/img/videojuegos/consolas/seriesX.jpg",
+    "stock": 6
+  },
+  {
+    "id": 3,
+    "nombre": "Playstation 5",
+    "precio": 15999.00,
+    "categoria": "videojuegos",
+    "tipo": "Consola",
+    "marca": "Sony",
+    "url": "./assets/img/videojuegos/consolas/play5.jpg",
+    "stock": 1
+  },
+  {
+    "id": 4,
+    "nombre": "The Legend of Zelda: Breath of the Wild",
+    "precio": 1499.00,
+    "categoria": "videojuegos",
+    "tipo": "Game",
+    "marca": "Nintendo",
+    "url": "./assets/img/videojuegos/juegos/coverBTOW.jpg",
+    "stock": 50
+  },
+  {
+    "id": 5,
+    "nombre": "Mario Strikers: Batle League",
+    "precio": 1299.00,
+    "categoria": "videojuegos",
+    "tipo": "Game",
+    "marca": "Nintendo",
+    "url": "./assets/img/videojuegos/juegos/MarioStrikers.jpg",
+    "stock": 100
+  },
+  {
+    "id": 6,
+    "nombre": "Yu-Gi-Oh! TCG: Battle of Chaos Booster Display",
+    "precio": 1799.00,
+    "categoria": "tcg",
+    "tipo": "Display",
+    "marca": "Yu-Gi-Oh!",
+    "url": "./assets/img/tcg/battleOCH.jpg",
+    "stock": 2
+  },
+  {
+    "id": 7,
+    "nombre": "Yu-Gi-Oh! Structure Deck: Albaz Strike",
+    "precio": 299.00,
+    "categoria": "tcg",
+    "tipo": "Structure Deck",
+    "marca": "Yu-Gi-Oh!",
+    "url": "./assets/img/tcg/structureAlbazStrike.jpg",
+    "stock": 7
+  },
+  {
+    "id": 8,
+    "nombre": "Yu-Gi-Oh! Legendary Duelist Season 3 Booster Box, Multicolor",
+    "precio": 349.00,
+    "categoria": "tcg",
+    "tipo": "Booster Box",
+    "marca": "Yu-Gi-Oh!",
+    "url": "./assets/img/tcg/yugiohLegendaryDuelistsSeason3.jpg",
+    "stock": 16
+  },
+  {
+    "id": 9,
+    "nombre": "Yu-Gi-Oh! TCG: Maximum Gold - El Dorado",
+    "precio": 349.00,
+    "categoria": "tcg",
+    "tipo": "Booster Box",
+    "marca": "Yu-Gi-Oh!",
+    "url": "./assets/img/tcg/yugiohMaximumGoldElDorado.jpg",
+    "stock": 4
+  },
+  {
+    "id": 10,
+    "nombre": "Pokemon Lucario Vstar Premium Collection Box - 6 Booster Packs",
+    "precio": 1099.00,
+    "categoria": "tcg",
+    "tipo": "Collection Box",
+    "marca": "Pokemon",
+    "url": "./assets/img/tcg/yugiohMaximumGoldElDorado.jpg",
+    "stock": 6
+  },
+  {
+    "id": 11,
+    "nombre": "Pokemon Lucario Vstar Premium Collection Box - 6 Booster Packs",
+    "precio": 1099.00,
+    "categoria": "tcg",
+    "tipo": "Collection Box",
+    "marca": "Pokemon",
+    "url": "./assets/img/tcg/pokemon/lucario.jpg",
+    "stock": 6
+  },
+  {
+    "id": 12,
+    "nombre": "Pokemon Lucario Vstar Premium Collection Box - 6 Booster Packs",
+    "precio": 1099.00,
+    "categoria": "tcg",
+    "tipo": "Collection Box",
+    "marca": "Pokemon",
+    "url": "./assets/img/tcg/pokemon/lucario.jpg",
+    "stock": 6
+  },
+  {
+    "id": 13,
+    "nombre": "Amiibo Ivysaur",
+    "precio": 499.00,
+    "categoria": "coleccionables",
+    "tipo": "Amiibo",
+    "marca": "Nintendo",
+    "url": "./assets/img/coleccionables/amiibo_ivysaur.jpg",
+    "stock": 29
+  },
+  {
+    "id": 13,
+    "nombre": "Amiibo",
+    "precio": 499.00,
+    "categoria": "coleccionables",
+    "tipo": "Amiibo",
+    "marca": "Nintendo",
+    "url": "./assets/img/coleccionables/amiibo_ivysaur.jpg",
+    "stock": 29
+  },
+  {
+    "id": 13,
+    "nombre": "Amiibo",
+    "precio": 499.00,
+    "categoria": "coleccionables",
+    "tipo": "Amiibo",
+    "marca": "Nintendo",
+    "url": "./assets/img/coleccionables/amiibo_ivysaur.jpg",
+    "stock": 29
+  },
+  {
+    "id": 13,
+    "nombre": "Amiibo",
+    "precio": 499.00,
+    "categoria": "coleccionables",
+    "tipo": "Amiibo",
+    "marca": "Nintendo",
+    "url": "./assets/img/coleccionables/amiibo_ivysaur.jpg",
+    "stock": 29
+  },
+  {
+    "id": 13,
+    "nombre": "Amiibo",
+    "precio": 499.00,
+    "categoria": "coleccionables",
+    "tipo": "Amiibo",
+    "marca": "Nintendo",
+    "url": "./assets/img/coleccionables/amiibo_ivysaur.jpg",
+    "stock": 29
+  },
+  {
+    "id": 13,
+    "nombre": "Amiibo",
+    "precio": 499.00,
+    "categoria": "coleccionables",
+    "tipo": "Amiibo",
+    "marca": "Nintendo",
+    "url": "./assets/img/coleccionables/amiibo_ivysaur.jpg",
+    "stock": 29
+  }
+]

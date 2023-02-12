@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #004280;
+    color: #fff;
+    width: 100vw;
+    position:absolute;
+    bottom: 0;
+}
+
+p{
+    margin-block-start: 5%;
+    margin-block-end: 0%;
+}
+
+.redes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 1rem;
+}
