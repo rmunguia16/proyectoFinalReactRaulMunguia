@@ -1,0 +1,44 @@
+.emptyCart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh  0;
+    width: 70vw;
+    height: 60vh;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1.7rem 0;
+    justify-content: space-around;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.title{
+    font-size: 4rem;
+    color: #004280;
+    padding: 0 !important;
+    margin: 0 !important;
+    justify-self: center;
+}
+
+.text{
+    margin-top: 0;
+    font-size: 2rem;
+    color: #004280;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.img{
+    width: 20vw;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.dontWorry{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}

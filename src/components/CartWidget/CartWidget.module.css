@@ -1,7 +1,4 @@
-@font-face {
-    font-family: heroGamesFont;
-    src: url(../../fonts/hiJack.ttf);
-  }
+@import url("../../fonts/font.css");
 
 .container{
     display: flex;
