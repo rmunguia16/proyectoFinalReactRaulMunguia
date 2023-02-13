@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useParams } from "react-router-dom";
 import "./App.css";
+import db from "../db/firebase-config.js";
+import { collection, getDocs, deleteDoc, doc} from "firebase/firestore";
 import Mantenimiento from "./components/Maint";
 import Home from "./components/Home";
 import ItemDetail from "./components/ItemDetail";
@@ -11,7 +13,33 @@ import styles from "./App.module.css";
 import Cart from "./components/Cart";
 
 function App() {
-  const [items, setItems] = useState("");
+/*   const [items, setItems] = useState([]);
+  const itemsCollectionRef = collection(db, "items");
+  const [loading, setLoading] = useState(true);
+
+  const { id } = useParams();
+
+  const getItem = async () => {
+    const itemsCollection = await getDocs(itemsCollectionRef);
+    setItems(
+      itemsCollection.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+    );
+    setLoading(false);
+  };
+
+  const deleteItem = async (id) => {
+    const itemDocRef = doc(db, "items", id);
+    await deleteDoc(itemDocRef);
+    getItem();
+  };
+
+  useEffect(() => {
+    getItem();
+  }, []);
+
+  if (loading) {
+    return <h1>Cargando...</h1>;
+  } */
 
   return (
     <div className={styles.app}>

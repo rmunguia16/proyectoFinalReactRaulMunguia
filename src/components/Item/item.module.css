@@ -1,0 +1,16 @@
+.container {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: antiquewhite;
+}
+
+.container:hover {
+  background-color: rgb(249, 164, 134) ;
+}
+
+.container:active {
+  background-color: rgb(255, 121, 72) ;
+}
