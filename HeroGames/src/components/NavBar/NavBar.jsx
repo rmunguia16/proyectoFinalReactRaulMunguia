@@ -9,7 +9,7 @@ const NavBar = ({ carrito }) => {
     <nav className={styles.topPage}>
       <div className={styles.topPage__Up}>
         <Link to="/">
-          <h1 className="brand">HeroGames</h1>
+          <h1 className={styles.brand}>HeroGames</h1>
         </Link>
         <CartWidget carrito={carrito} />
       </div>

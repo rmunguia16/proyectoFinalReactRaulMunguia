@@ -6,8 +6,6 @@
     background-color: #004280;
     color: #fff;
     width: 100vw;
-    position:absolute;
-    bottom: 0;
 }
 
 p{
@@ -20,4 +18,9 @@ p{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
     padding: 1rem;
+}
+
+.img{
+    width: 2rem;
+    height: 2rem;
 }

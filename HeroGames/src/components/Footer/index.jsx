@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./footer.module.css";
+import TW from "../../assets/redes/TW.png";
+import Twitch from "../../assets/redes/Twitch.png";
+import YouTube from "../../assets/redes/YouTube.png";
+import Facebook from "../../assets/redes/Facebook.png";
+import Instagram from "../../assets/redes/Instagram.png";
+
 
 const Footer = () => {
   
@@ -12,19 +18,19 @@ const Footer = () => {
 
       <div className={styles.redes}>
         <Link to={'https://www.facebook.com/gaming/HeroGamesShop'}>
-          <img src="/assets/icons/redes/fb.png" alt="Facebook" />
+          <img className={styles.img} src={Facebook} alt="Facebook" />
         </Link>
         <Link to={'https://www.instagram.com/rulink10/'}>
-          <img src="/assets/icons/redes/IG.png" alt="Instagram" />
+          <img className={styles.img} src={Instagram} alt="Instagram" />
         </Link>
         <Link to={'https://twitter.com/Rulink10'}>
-          <img src="/assets/icons/redes/TW.png" alt="Twitter" />
+          <img className={styles.img} src={TW} alt="Twitter" />
         </Link>
         <Link to={'https://www.youtube.com/channel/UCFnCqUS76YrJ9YNVRemCbWw'}>
-          <img src="/assets//icons/redes/yt.png" alt="YouTube" />
+          <img className={styles.img} src={YouTube} alt="YouTube" />
         </Link>
         <Link to={'https://www.twitch.tv/rulink10'}>
-          <img src="/assets/icons/redes/TTV.png" alt="Twitch" />
+          <img className={styles.img} src={Twitch} alt="Twitch" />
         </Link>
       </div>
     </div>

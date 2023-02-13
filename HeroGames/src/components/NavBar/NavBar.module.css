@@ -1,35 +1,37 @@
+@font-face {
+  font-family: heroGamesFont;
+  src: url(../../fonts/hiJack.ttf);
+}
+
 .topPage {
   display: grid;
   grid-template-rows: repeat(2, auto);
-  position: absolute;
-  top: 0;
   background-color: #004280;
+  width: 100vw;
 }
 
 .topPage__Up {
-  display: grid;
-  grid-template-columns: repeat(11, 1fr);
-  align-items: center;
+  display: flex;
+  width: 95%;
+  justify-self: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 1rem;
   border-bottom: 1px solid rgb(136, 136, 136);
 }
 
-h1{
-    grid-column: 1/4;
-    color: aliceblue;
-    font-size: 2rem !important;
-    font-weight: 700;
-    margin: 0;
-    padding: 0.7rem;
-}
 
 .topPage__Down {
   display: flex;
   justify-content: space-around;
 }
+
 .brand {
-  grid-column: 1/4;
   display: block;
+  font-family: heroGamesFont;
+  color: aliceblue;
+  font-size: 2rem !important;
+  margin: 0;
 }
 
 button {
@@ -38,8 +40,7 @@ button {
   transition: 0.3s !important;
 }
 
-button:hover{
-    color: #004280;
-    background-color: aliceblue !important;
+button:hover {
+  color: #004280;
+  background-color: aliceblue !important;
 }
-
