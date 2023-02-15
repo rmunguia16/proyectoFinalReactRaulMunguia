@@ -8,11 +8,23 @@
     font-size: 1rem;
     text-align: center;
     padding: 1.7rem 0;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: #fff;
     border-radius: 0.5rem;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 }
+
+.titleDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 10vh;
+    padding-bottom: 2vh;
+    border-radius: 0.5rem 0.5rem 0 0;
+    border-bottom: solid rgba(0, 0, 0, 0.2);
+}
+
 
 .title{
     font-size: 4rem;
@@ -37,8 +49,10 @@
 }
 
 .dontWorry{
+    padding-top: 2vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     align-items: center;
+    justify-items: center;
 }

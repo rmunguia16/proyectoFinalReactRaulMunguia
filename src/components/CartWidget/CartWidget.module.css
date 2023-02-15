@@ -1,24 +1,24 @@
-@import url("../../fonts/font.css");
-
 .container{
     display: flex;
-    justify-content: space-around;  
+    justify-content: right;
     align-items: center;
-    border-radius: 5%;
-    font-family: heroGamesFont;
-    width: 5vw;
+    border-radius: 10%;
     transition: all 0.3s ease;
+    font-style: italic;
+    border: solid 2px rgba(255, 255, 255, 0);
+    padding: 0 5px;
+
 }
 
 .container:hover{
-    border-color: solid 1px white;
+    border: solid 2px white;
 }
 
 .number{
     color: white;
     font-size: 1.5rem;
     margin: 0;
-    padding: 0.5rem;
+    padding-right: 5px;    
 }
 
 .cart{

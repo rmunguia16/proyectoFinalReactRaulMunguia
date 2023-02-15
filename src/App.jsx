@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Route, Routes, useParams } from "react-router-dom";
 import "./App.css";
 import db from "../db/firebase-config.js";
-import { collection, getDocs, deleteDoc, doc} from "firebase/firestore";
+import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 import Mantenimiento from "./components/Maint";
 import Home from "./components/Home";
 import ItemDetail from "./components/ItemDetail";
@@ -11,64 +11,82 @@ import data from "./data.json";
 import NavBar from "./components/NavBar/NavBar";
 import styles from "./App.module.css";
 import Cart from "./components/Cart";
+import Loading from "./components/Loading";
 
 function App() {
-/*   const [items, setItems] = useState([]);
+  const [items, setItems] = useState([]);
+  const [highlights, setHighlights] = useState([]);
   const itemsCollectionRef = collection(db, "items");
+  const highlightsCollectionRef = collection(db, "highlights");
   const [loading, setLoading] = useState(true);
 
   const { id } = useParams();
 
-  const getItem = async () => {
-    const itemsCollection = await getDocs(itemsCollectionRef);
-    setItems(
-      itemsCollection.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-    );
-    setLoading(false);
+  const getItem = () => {
+      getDocs(itemsCollectionRef).then(itemsCollection => {
+        setItems(
+          itemsCollection.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+        )
+        console.log(items);
+    }) ;
   };
 
-  const deleteItem = async (id) => {
-    const itemDocRef = doc(db, "items", id);
-    await deleteDoc(itemDocRef);
-    getItem();
-  };
+  const getHighlights = () => {
+    getDocs(highlightsCollectionRef).then(highlightsCollection => {
+      setHighlights(
+        highlightsCollection.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+      )
+      console.log(highlights);
+      setLoading(false);
+  }) ;
+};
 
   useEffect(() => {
     getItem();
+    getHighlights();
   }, []);
 
-  if (loading) {
-    return <h1>Cargando...</h1>;
-  } */
 
   return (
-    <div className={styles.app}>
-      <NavBar/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/videojuegos" element={<h1>Videojuegos</h1>} />
-        <Route path="/videojuegos/:name" element={<ItemDetail data={data} />} />
-        <Route path="/juegos De Mesa" element={<Mantenimiento />} />
-        <Route
-          path="/juegos De Mesa/:name"  
-          element={<ItemDetail data={data} />}
-        />
-        <Route path="/tcg" element={<h1>TCG</h1>} />
-        <Route path="/tcg/:name" element={<ItemDetail data={data} />} />
-        <Route path="/comics y mangas" element={<h1>Comics</h1>} />
-        <Route
-          path="/comics y mangas/:name"
-          element={<ItemDetail data={data} />}
-        />
-        <Route path="/coleccionables" element={<h1>Coleccionables</h1>} />
-        <Route
-          path="/coleccionables/:name"
-          element={<ItemDetail data={data} />}
-        />
-        <Route path="/Carrito" element={<Cart/>} />
-      </Routes>
-      <Footer/>
-    </div>
+    <>
+      {loading ? (
+        <div className={styles.app}>
+          <NavBar />
+          <Loading />
+          <Footer />
+        </div>
+      ) : (
+        <div className={styles.app}>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/videojuegos" element={<h1>Videojuegos</h1>} />
+            <Route
+              path="/videojuegos/:name"
+              element={<ItemDetail data={data} />}
+            />
+            <Route
+              path="/juegos De Mesa"
+              element={<Mantenimiento titulo={"Juegos de Mesa"} />}
+            />
+            <Route path="/tcg" element={<h1>TCG</h1>} />
+            <Route path="/tcg/:name" element={<ItemDetail data={data} />} />
+            <Route path="/comics y mangas" element={<Mantenimiento />} />
+            <Route
+              path="/comics y mangas/:name"
+              element={<ItemDetail data={data} />}
+            />
+            <Route path="/coleccionables" element={<h1>Coleccionables</h1>} />
+            <Route
+              path="/coleccionables/:name"
+              element={<ItemDetail data={data} />}
+            />
+            <Route path="/Carrito" element={<Cart />} />
+          </Routes>
+          <Footer />
+        </div>
+      )}
+    </>
   );
 }
 

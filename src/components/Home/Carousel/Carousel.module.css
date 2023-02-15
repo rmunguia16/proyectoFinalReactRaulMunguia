@@ -1,0 +1,23 @@
+.carousel{
+    width: 1440px;
+    height: 50vh;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel > button{
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.carousel:hover > button{
+    opacity: 100;
+}
+
+.carousel:nth-child(odd){
+    left: 2%;
+}
+.carousel:nth-child(even){
+    right: 2%;
+}
