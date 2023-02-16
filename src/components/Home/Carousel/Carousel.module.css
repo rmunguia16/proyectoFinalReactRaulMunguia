@@ -4,20 +4,99 @@
     display: flex;
     overflow: hidden;
     position: relative;
+    margin-bottom: 2rem;
 }
 
-.carousel > button{
+.carousel > .button{
     transition: 0.5s;
     opacity: 0;
+    background-color: transparent;
 }
 
-.carousel:hover > button{
+.carousel:hover > .button{
     opacity: 100;
+    background-color: transparent !important;
+    border-color: transparent !important;
 }
 
-.carousel:nth-child(odd){
+.carousel > .button_left{
+    transform: translateX(60%);
+}
+
+.carousel > .button_right{
+    transform: translateX(-60%);
+}
+
+.carousel:hover > .button_left{
+    transform: translateX(0%);
+}
+
+.carousel:hover > .button_right{
+    transform: translateX(-0%);
+}
+
+.svg{
+    cursor: pointer;
+    color: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    padding: 20%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.3s;
+    border: 2px solid;
+    border-radius: 100%;
+    fill: #fff!important;
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.svg:hover{
+    background-color: #0087b7;
+    border-color: #0087b7;
+}
+
+.button_right{
+    background-color: transparent;
+    border: none;
+    bottom: 40%;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transition: transform .3s,opacity .3s,background .3s,box-shadow .3s;
+    width: 3%;
+    right: 2%;
+}
+
+.button_left{
+    background-color: transparent;
+    border: none;
+    bottom: 40%;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transition: transform .3s,opacity .3s,background .3s,box-shadow .3s;
+    width: 3%;
     left: 2%;
 }
-.carousel:nth-child(even){
-    right: 2%;
+
+.button_left:focus{
+    outline: 0;
+}
+.button_right:focus{
+    outline: 0;
+}
+
+.img{
+    width: 1440px;
+    object-fit: cover;
+    object-position: 0% 15%;
 }

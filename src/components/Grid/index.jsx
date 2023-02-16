@@ -1,15 +1,18 @@
-import Form from "../Form";
+import { useContext } from "react";
 import Item from "../Item";
 import styles from "./grid.module.css";
+import { ItemsContext } from "../../App";
 
-const Grid = ({ items, setItems, deleteItem }) => {
+const Grid = () => {
+const i = useContext(ItemsContext);
+
   return (
     <>
-      <Form setItems={setItems} />
       <div className={styles.items}>
-        {items.map((item) => {
+        <h1>{}</h1>
+        {i.map((item) => {
           return (
-              <Item item={item} deleteItem={deleteItem} key={item.id}/>
+              <Item item={item} key={item.id}/>
           );
         })}
       </div>
