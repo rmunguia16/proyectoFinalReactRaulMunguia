@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from "react";
 import { Route, Routes, useParams } from "react-router-dom";
-import "./App.css";
 import Mantenimiento from "./components/Maint";
 import Home from "./components/Home";
 import ItemDetail from "./components/ItemDetail";
@@ -52,13 +51,13 @@ function App() {
                     </>
                   }
                 />
-                <Route path="/videojuegos" element={<Products/>} />
+                <Route path="/videojuegos" element={<Products category={"Videojuegos"}/>} />
                 <Route path="/videojuegos/:name" element={<ItemDetail />} />
                 <Route
                   path="/juegos De Mesa"
                   element={<Mantenimiento titulo={"Juegos de Mesa"} />}
                 />
-                <Route path="/tcg" element={<h1>TCG</h1>} />
+                <Route path="/tcg" element={<Products category={"TCG"}/>} />
                 <Route path="/tcg/:name" element={<ItemDetail />} />
                 <Route path="/comics y mangas" element={<Mantenimiento />} />
                 <Route

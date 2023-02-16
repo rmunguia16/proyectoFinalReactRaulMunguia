@@ -1,7 +1,9 @@
 import styles from "./item.module.css";
 import { Link } from "react-router-dom";
 
+
 const Item = ({ item }) => {
+  const url = `/src/img/${item.category}/${item.type}/${item.sku}.jpg`;
   return (
     <div className={styles.container} key={item.id}>
       {/* <Link to={`${item.id}`} key={item.id}>
@@ -9,10 +11,12 @@ const Item = ({ item }) => {
       </Link>
       <p>${item.price}</p>
     */}
+      <img src={url} alt={item.name} className={styles.img}/>
       <h3>{item.name}</h3>
       <h4>${item.price}</h4>
-      <img src={item.image} alt={item.name} />
-      <button onClick={() => {deleteItem(item.id);}}>Eliminar</button> 
+      <p>{item.category}</p>
+      <button className={styles.btn} onClick={() => {agregar(item.id);}}>Agregar</button> 
+
     </div>
   );
 };

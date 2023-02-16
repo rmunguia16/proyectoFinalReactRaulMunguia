@@ -1,15 +1,15 @@
-import React from 'react'
-import Grid from '../Grid'
-import styles from './products.module.css'
-import Filter from '../Filter'
+import React from "react";
+import Grid from "../Grid";
+import styles from "./products.module.css";
+import Filter from "../Filter";
 
-const Products = () => {
+const Products = ({ category }) => {
   return (
     <div className={styles.products}>
-        <Filter/>
-        <Grid/>
-        </div>
-  )
-}
+      <Filter />
+      <Grid category={category} />
+    </div>
+  );
+};
 
-export default Products
+export default Products;
