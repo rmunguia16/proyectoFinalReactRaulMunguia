@@ -3,30 +3,32 @@
   text-transform: capitalize;
   color: black;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 15px;
   background-color: white;
 }
 
-.container:hover {
-  background-color: rgb(249, 164, 134) ;
+.container:hover > .info{
+  background-color: #004280;
+  color:white;
 }
 
-.container:active {
-  background-color: rgb(255, 121, 72) ;
+.container:active > .info{
+  color: white;
+  background-color: #0084ff !important;
 }
 
 .img{
-  max-height: 300px;
+  max-height: 250px;
   padding-top: 0.5rem;
 }
 
-.btn{
-  opacity: 100 !important;
-  color: white;
-  background-color: #004280 !important;
+.info{
+  padding-top: 1rem;
+  position: relative;
+  bottom: 0;
 }
 
-.btn:hover{
-  color: white;
-  background-color: #0084ff !important;
+.text{
+  margin: 0 !important;
+  padding-bottom: 1rem;
 }

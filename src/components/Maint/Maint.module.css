@@ -1,18 +1,19 @@
 .container{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     background-color: #FACD00;
-    font-size: 1rem;
     text-align: center;
-    padding: 0;
-    height: 76.5vh;
+    padding-bottom: 5px;
 }
 
 .manteinence{
     color: black !important;
     margin-block-start: 0em !important;
     margin-block-end: 0em !important;
+}
+
+.img{
+    padding: auto;
+    margin: auto;
 }

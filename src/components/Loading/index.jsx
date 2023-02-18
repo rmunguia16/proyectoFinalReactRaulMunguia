@@ -1,11 +1,11 @@
-import styles from './Spinner.module.css';
+import styles from "./Spinner.module.css";
 
 const Spinner = () => {
   return (
-    <div className={styles.loaderContainer}>
+      <div className={styles.loaderContainer}>
         <span className={styles.loader}></span>
-    </div>
-  )
+      </div>
+  );
 };
 
 export default Spinner;

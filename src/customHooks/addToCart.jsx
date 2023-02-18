@@ -1,20 +1,30 @@
 import db from "../../db/firebase-config";
-import { collection, addDoc, getDocs } from "firebase/firestore";
+import { collection, getDocs, addDoc, updateDoc } from "firebase/firestore";
 
-const addToCart = async (e,id) => {
-  e.preventDefault();
+const addToCart = async (inputName, inputPrice, inputQuantity, id, img) => {
+  const ref = collection(db, "cart");
+  const cartContent = await getDocs(ref);
+  let flag = false;
+  let doc = {};
   const newItem = {
     name: inputName,
     price: inputPrice,
     quantity: inputQuantity,
-    id: id
+    id: id,
+    img: img,
   };
-  const itemsCollectionRef = collection(db, "items");
-  await addDoc(itemsCollectionRef, newItem); //agrega el item a la coleccion
-  const data = await getDocs(itemsCollectionRef);
-  setItems(data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))); //actualiza el estado de items
-  setInputName("");
-  setInputPrice("");
+  console.log(cartContent.docs);
+  for (let i = 0; cartContent.docs.length > i; i++) {
+    if (cartContent.docs[i].data().id == id) {
+      flag = true;
+      doc = cartContent.docs[i].data();
+      var docRef = cartContent.docs[i].ref;
+    }
+  }
+  flag
+    ? await updateDoc(docRef, { quantity: doc.quantity + inputQuantity })
+    : await addDoc(ref, newItem);
+  window.location = `/carrito`;
 };
 
 export default addToCart;

@@ -5,10 +5,10 @@
     align-items: center;
     background-color: #004280;
     color: #fff;
-    width: 100vw;
+    width: 100%;
 }
 
-p{
+.container > p{
     margin-block-start: 5%;
     margin-block-end: 0%;
 }

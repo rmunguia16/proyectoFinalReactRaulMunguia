@@ -1,34 +1,89 @@
-.box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    text-transform: capitalize;
-    border-radius: 5px;
-    width: 15vw;
-    padding: 1rem;
+.box {
+  display: flex;
+  text-transform: capitalize;
+  border-radius: 5px;
+  justify-content: space-around;
+  height: 800px;
+  align-items: center;
+}
+
+.imgBox > img {
+  width: 500px;
+}
+
+.description {
+  width: 700px;
+  text-align: justify;
 }
 
 .container {
-    text-decoration: none;
-    text-transform: capitalize;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: antiquewhite;
-    width: 50%;
-    padding: 1rem;    
+  text-transform: capitalize;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(245, 245, 245);
+  width: 250px;
+  height: 400px;
 }
 
-button{
-    background-color: red !important;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+.container > h2,
+p {
+  margin: 0;
+}
+
+.btn {
+  color: white;
+  height: 50%;
+  background-color: #004280 !important;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #0084ff !important;
+}
+
+
+.amountDiv {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+
+}
+
+.amountDiv > div {
+  border: solid 1px #004280;
+}
+
+.amountBtn {
+  width: 50px;
+  height: 40px;
+}
+
+.btnMinus {
+  border-radius: 30% 0 0 30%;
+}
+.btnPlus {
+  border-radius: 0 30% 30% 0;
+}
+
+.amount {
+  display: flex;
+  
+  height: 38px;
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.amountInput{
+  margin: 0;
+  padding: 0;
+  
+}
+
+.btnCart {
+  width: 130px;
+  height: 45px;
+  border-radius: 10px;
 }

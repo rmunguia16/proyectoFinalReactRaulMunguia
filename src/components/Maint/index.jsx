@@ -8,7 +8,7 @@ const Mantenimiento = () => {
   return (
     <div className={styles.container}>
       <h1 style={{color:'black'}}>En Mantenimiento</h1>
-      <img src={mario} alt="Mantenimiento"/>
+      <img src={mario} className={styles.img} alt="Mantenimiento"/>
     </div>
   );
 };

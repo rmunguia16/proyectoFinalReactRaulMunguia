@@ -1,0 +1,7 @@
+.app{
+    width: 99.1vw !important;
+    display: grid;
+    text-align: center;
+    min-height: 770px;
+    background-color: #f1f1f1;
+}

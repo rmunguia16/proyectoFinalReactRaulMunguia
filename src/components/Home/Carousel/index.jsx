@@ -11,10 +11,10 @@ const Carousel = () => {
   return (
     <div className={styles.carousel}>
       <section>
-        <img src={img1} alt="img1" className={styles.img} style={{objectPosition: '0px -200px'}}/>
+        <img src={img1} alt="img1" className={styles.img} />
         <img src={img2} alt="img2" className={styles.img} />
         <img src={img3} alt="img3" className={styles.img} />
-        <img src={img4} alt="img4" className={styles.img} style={{objectposition: '0% 50%'}}/>
+        <img src={img4} alt="img4" className={styles.img} />
         <img src={img1} alt="img5" className={styles.img} />
       </section>
 

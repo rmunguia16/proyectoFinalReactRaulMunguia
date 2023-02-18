@@ -11,7 +11,7 @@ import Instagram from "../../assets/redes/Instagram.png";
 const Footer = () => {
   
   return (
-    <div className={styles.container}>
+    <footer className={styles.container}>
       <div className={styles.row}>
         <p className="col text-center">Desarrollado por Raul Munguia</p>
       </div>
@@ -33,7 +33,7 @@ const Footer = () => {
           <img className={styles.img} src={Twitch} alt="Twitch" />
         </Link>
       </div>
-    </div>
+    </footer>
   );
 };
 
