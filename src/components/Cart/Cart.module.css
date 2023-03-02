@@ -87,3 +87,28 @@
   color: white;
   background-color: red !important;
 }
+
+.btnBuy {
+  font-size: 16px;
+  color: #004280;
+}
+.btnBuy > .mdiDelEmpty {
+  display: none;
+}
+.btnBuy:hover {
+  background-color: #61a2df !important;
+  color: #004280;
+}
+
+.btnBuy:active {
+  box-shadow: 0 0 0 4px #379eff;
+  color: white;
+  background-color: #004280 !important;
+}
+
+.total{
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content:space-evenly ;
+}

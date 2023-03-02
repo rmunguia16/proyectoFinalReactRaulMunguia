@@ -60,11 +60,25 @@ const Cart = () => {
               return <CartItem item={item} />;
             }
           })}
-          <div>
+          <div className={styles.total}>
             <h2>Total:</h2>
-            <p>${total}</p>
+            <p className={styles.text}>${total}</p>
             <button
               className={`${styles.btn} ${styles.btnDel}`}
+              onClick={() => {
+                setLoading(true)
+                cart.map((item) => {
+                  if (Object.keys(item).length > 1) {
+                    vaciarCarro(item.id);
+                  }
+                });
+                getAll(setLoading, setCartTotal, setCart, setItems, setHighlights);
+              }}
+            >
+              Vaciar Carrito
+            </button>
+            <button
+              className={`${styles.btn} ${styles.btnBuy}`}
               onClick={() => {
                 setLoading(true)
                 cart.map((item) => {
@@ -74,10 +88,12 @@ const Cart = () => {
                   }
                 });
                 getAll(setLoading, setCartTotal, setCart, setItems, setHighlights);
+                alert("¡Felicidades! Tu pedido está siendo preparado")
               }}
             >
-              Vaciar Carrito
+              Comprar
             </button>
+            
           </div>
         </>
       ) : (

@@ -7,3 +7,15 @@
     width: 100%;
     
 }
+
+@font-face {
+    font-family: heroGamesFont;
+    src: url(../../fonts/hiJack.ttf);
+  }
+
+  .brand {
+    font-family: heroGamesFont;
+    color: #004280;
+    font-size: 5rem !important;
+  }
+  

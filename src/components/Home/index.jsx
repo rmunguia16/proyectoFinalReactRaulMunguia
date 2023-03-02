@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <>
-    <h1>¡Hero games!</h1>
+    <h1 className={styles.brand}>¡Hero games!</h1>
     <div className={styles.CarouselContainer}>
         <Carousel />
     </div>
