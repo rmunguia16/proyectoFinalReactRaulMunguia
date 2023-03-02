@@ -3,19 +3,24 @@ import Carousel from "./Carousel";
 import styles from "./Home.module.css";
 import { useContext } from "react";
 import { ItemsContext } from "../../App";
+import Item from "../Item";
 
 const Home = () => {
-  const items = useContext(ItemsContext);
+  const itemList = useContext(ItemsContext);
+  const items = itemList.map((item) => {
+    return <Item item={item} key={item.id} />;
+  });
 
   return (
-    <div>
-      <div className={styles.CarouselContainer}>
+    <>
+    <h1>¡Hero games!</h1>
+    <div className={styles.CarouselContainer}>
         <Carousel />
-      </div>
-      {items.map((item) => {
-        return <h1>{item.name}</h1>;
-      })}
     </div>
+    <div className={styles.items}>
+      {items}
+    </div>
+    </>
   );
 };
 

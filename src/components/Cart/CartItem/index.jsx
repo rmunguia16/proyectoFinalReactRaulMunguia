@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import styles from "./CartItem.module.css";
 import db from "/db/firebase-config.js";
-import { getDoc, deleteDoc, doc } from "firebase/firestore";
 import { Link } from "react-router-dom";
+import { getDoc, deleteDoc, doc } from "firebase/firestore";
+import { TotalContext, SetTotalContext } from "../../../App";
 
 const CartItem = (item) => {
   const deleteItem = async (id) => {
@@ -10,10 +11,6 @@ const CartItem = (item) => {
     await deleteDoc(docId);
     window.location.reload();
   };
-
-  useEffect(() => {
-    console.log(item.item.id);
-  }, []);
 
   return (
     <div className={styles.cartItem}>
@@ -27,9 +24,10 @@ const CartItem = (item) => {
       <div className={styles.cartItem__info}>
         <h2 className={styles.cartItem__name}>{item.item.name}</h2>
       </div>
-        <h3 className={styles.cartItem__quantity}>
-          Cantidad: {item.item.quantity}
-        </h3>
+
+      <h3 className={styles.cartItem__quantity}>
+        Cantidad: {item.item.quantity}
+      </h3>
 
       <div className={styles.cartItem__actions}>
         <p className={styles.cartItem__price}>

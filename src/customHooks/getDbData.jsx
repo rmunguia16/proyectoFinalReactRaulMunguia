@@ -14,7 +14,7 @@ const getDbData = async (dbName, setDB, setLoading, setCartTotal) => {
     let sum = 0;
     data.forEach((item) => {
       if (Object.keys(item).includes("quantity")) {
-        sum += item.quantity;
+        sum += parseInt(item.quantity);
       }
     });
     setCartTotal(sum);

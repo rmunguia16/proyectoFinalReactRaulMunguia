@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react";
-import { Link, redirect, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styles from "./itemDetail.module.css";
 import addToCart from "../../customHooks/addToCart";
 import {
@@ -78,9 +78,9 @@ const ItemDetail = () => {
         <button
           className={`${styles.btn} ${styles.btnCart}`}
           onClick={() => {
-            addToCart(item.name, item.price, quantity, item.id, item.img);
+            addToCart(item.name, item.price, quantity, item.id, item.img, item.stock);
             setLoading(true);
-            setCartTotal(cartTotal+quantity);
+            setCartTotal(parseInt(cartTotal)+parseInt(quantity));
           }}
         >
           Agregar

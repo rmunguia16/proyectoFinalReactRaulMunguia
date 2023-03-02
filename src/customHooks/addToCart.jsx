@@ -1,7 +1,7 @@
 import db from "../../db/firebase-config";
 import { collection, getDocs, addDoc, updateDoc } from "firebase/firestore";
 
-const addToCart = async (inputName, inputPrice, inputQuantity, id, img) => {
+const addToCart = async (inputName, inputPrice, inputQuantity, id, img, stock, cartTotal) => {
   const ref = collection(db, "cart");
   const cartContent = await getDocs(ref);
   let flag = false;
@@ -22,7 +22,12 @@ const addToCart = async (inputName, inputPrice, inputQuantity, id, img) => {
     }
   }
   flag
-    ? await updateDoc(docRef, { quantity: doc.quantity + inputQuantity })
+    ? await updateDoc(
+        docRef,
+        (doc.quantity + inputQuantity) > stock
+          ? { quantity: stock }
+          : { quantity: doc.quantity + inputQuantity }
+      )
     : await addDoc(ref, newItem);
   window.location = `/carrito`;
 };

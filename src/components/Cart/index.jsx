@@ -4,18 +4,20 @@ import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Cart.module.css";
 import sonic from "../../assets/icons/sonic.png";
-import db from "../../../db/firebase-config.js";
-import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
+import db from "/db/firebase-config.js";
+import { deleteDoc, doc } from "firebase/firestore";
 import Loading from "../Loading";
 import getAll from "../../customHooks/getAll";
 import {
   ItemsContext,
   CartContext,
+  TotalContext,
   SetItemsContext,
   SetCartContext,
   SetCartTotalContext,
   SetLoadingContext,
   SetHighlightsContext,
+  SetTotalContext,
 } from "../../App";
 
 const Cart = () => {
@@ -26,28 +28,58 @@ const Cart = () => {
   const setHighlights = useContext(SetHighlightsContext);
   const setLoading = useContext(SetLoadingContext);
   const setCartTotal = useContext(SetCartTotalContext);
+  const setTotal = useContext(SetTotalContext);
+  const total = useContext(TotalContext);
   const setItems = useContext(SetItemsContext);
+  let amount = 0;
+
+  const vaciarCarro = async (id) => {
+    const docId = doc(db, "cart", id);
+    await deleteDoc(docId);
+  };
 
   useEffect(() => {
     if (cart == undefined) {
       getAll(setLoading, setCartTotal, setCart, setItems, setHighlights);
     }
+    cart.map((item) => {
+      if (Object.keys(item).length > 1) {
+        console.log(item);
+        amount = amount + item.quantity * item.price;
+      }
+    });
+    setTotal(amount / 2);
   }, []);
-
-  /*   const deleteItem = async (id) => {
-    const itemDocRef = doc(db, "items", id);
-    await deleteDoc(itemDocRef);
-    getItem();
-  }; */
 
   return (
     <div className={styles.emptyCart}>
       {cart.length > 1 ? (
-        cart.map((item) => {
-          if (Object.keys(item).length > 1) {
-          return <CartItem item={item} />;
-          }
-        })
+        <>
+          {cart.map((item) => {
+            if (Object.keys(item).length > 1) {
+              return <CartItem item={item} />;
+            }
+          })}
+          <div>
+            <h2>Total:</h2>
+            <p>${total}</p>
+            <button
+              className={`${styles.btn} ${styles.btnDel}`}
+              onClick={() => {
+                setLoading(true)
+                cart.map((item) => {
+                  if (Object.keys(item).length > 1) {
+                    vaciarCarro(item.id);
+                    console.log("Carrito:" + item);
+                  }
+                });
+                getAll(setLoading, setCartTotal, setCart, setItems, setHighlights);
+              }}
+            >
+              Vaciar Carrito
+            </button>
+          </div>
+        </>
       ) : (
         <>
           <div className={styles.titleDiv}>
